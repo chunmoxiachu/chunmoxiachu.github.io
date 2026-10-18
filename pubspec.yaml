@@ -1,0 +1,50 @@
+name: chunmoxiachu_site
+description: "良竹 LIANGZHU — AI 架构、全栈交付与实战培训。Flutter Web 复刻站点。"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  go_router: ^18.1.0
+  url_launcher: ^6.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/
+    - assets/brand/stickers/
+    - assets/brand/content/
+    - assets/brand/method-plaques/
+    - assets/brand/method-glass/
+    - assets/glass/
+  fonts:
+    - family: TikTok Sans
+      fonts:
+        - asset: assets/fonts/TikTokSans.ttf
+    - family: Geist Mono
+      fonts:
+        - asset: assets/fonts/GeistMono.ttf
+    - family: Departure Mono
+      fonts:
+        - asset: assets/fonts/DepartureMono.ttf
+    # Bundled CJK fallback (subset of Noto Sans SC, OFL) so Chinese copy
+    # renders without a network round trip to fonts.gstatic.com.
+    - family: Noto Sans SC
+      fonts:
+        - asset: assets/fonts/NotoSansSC-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSansSC-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansSC-SemiBold.ttf
+          weight: 600

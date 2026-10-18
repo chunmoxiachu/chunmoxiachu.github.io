@@ -1,0 +1,36 @@
+{
+    "name": "良竹 LIANGZHU",
+    "short_name": "良竹",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#C8DFEB",
+    "theme_color": "#C8DFEB",
+    "description": "AI 架构、全栈交付与实战培训。",
+    "orientation": "any",
+    "lang": "zh-CN",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

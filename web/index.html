@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- Served from the organisation root site, so the base stays "/". -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>良竹｜AI 架构、全栈交付与实战培训</title>
+  <meta name="description"
+        content="良竹 LIANGZHU：14 年全栈研发与产品经验，为企业提供 AI 咨询、企业实战培训与 FDE 落地交付。从真实问题出发，交付能稳定运行的成果。">
+  <meta name="keywords" content="良竹,LIANGZHU,AI 咨询,AI 培训,企业 AI 落地,FDE,AI 架构,全栈交付">
+  <meta name="author" content="良竹 LIANGZHU">
+  <meta name="theme-color" content="#C8DFEB">
+  <link rel="canonical" href="https://chunmoxiachu.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="良竹 LIANGZHU">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="良竹｜把 AI 用进真实业务">
+  <meta property="og:description" content="AI 咨询、企业实战培训与 FDE 落地交付。从真实问题出发，把下一步做出来。">
+  <meta property="og:url" content="https://chunmoxiachu.github.io/">
+  <meta property="og:image" content="https://chunmoxiachu.github.io/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="良竹｜把 AI 用进真实业务">
+  <meta name="twitter:description" content="AI 咨询、企业实战培训与 FDE 落地交付。">
+  <meta name="twitter:image" content="https://chunmoxiachu.github.io/og-cover.png">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="良竹 LIANGZHU">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #C8DFEB;
+    }
+    #boot {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #111111;
+      letter-spacing: 0.22em;
+      font-size: 12px;
+      background: linear-gradient(180deg, #C8DFEB 0%, #BBD6E7 100%);
+    }
+    #boot .rule {
+      width: 56px;
+      height: 2px;
+      background: #C0FE04;
+    }
+    @media (prefers-color-scheme: dark) {
+      #boot { background: #10151B; color: #F2F5F7; }
+    }
+  </style>
+</head>
+<body>
+  <div id="boot">
+    <div class="rule"></div>
+    <div>良竹 / LIANGZHU</div>
+  </div>
+
+  <noscript>
+    <div style="padding:48px;font-family:sans-serif;color:#111">
+      <h1>良竹 LIANGZHU</h1>
+      <p>本站需要启用 JavaScript 才能浏览。请通过微信 liangzhu2073 联系良竹。</p>
+    </div>
+  </noscript>
+
+  <script>
+    // Remove the boot placeholder as soon as Flutter paints its first frame.
+    window.addEventListener('flutter-first-frame', function () {
+      var boot = document.getElementById('boot');
+      if (boot && boot.parentNode) boot.parentNode.removeChild(boot);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
