@@ -296,19 +296,20 @@ class _ScrollProgressButton extends StatelessWidget {
             }
           },
           child: SizedBox(
-            width: 26,
-            height: 26,
+            width: 40,
+            height: 40,
             child: Stack(
               alignment: Alignment.center,
               children: [
                 CustomPaint(
-                  size: const Size(26, 26),
+                  size: const Size(40, 40),
                   painter: _ProgressRingPainter(progress: value, color: color),
                 ),
-                Container(
-                  width: 4,
-                  height: 4,
-                  decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+                // The original site signs the corner off with an "LZ" mark;
+                // the ring around it doubles as the reading-progress meter.
+                Text(
+                  'LZ',
+                  style: Lz.label(size: 11.5, letterSpacing: 0.14, color: color),
                 ),
               ],
             ),
