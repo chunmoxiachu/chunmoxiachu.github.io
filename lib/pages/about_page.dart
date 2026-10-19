@@ -9,7 +9,7 @@ import '../widgets/page_parts.dart';
 import '../widgets/primitives.dart';
 import '../widgets/site_shell.dart';
 
-/// `/about` — who Liangzhu is, plus the direct contact details.
+/// `/about` — who Chunmo Xiachu is, plus the direct contact details.
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
 

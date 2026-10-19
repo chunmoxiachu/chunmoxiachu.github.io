@@ -39,8 +39,8 @@ class AboutSection extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(context.isZh ? '良竹' : 'LIANGZHU', style: Lz.mono(size: 13, color: palette.inkSoft)),
-              Text(context.isZh ? 'LIANGZHU' : 'AI IN PRACTICE', style: Lz.mono(size: 13, color: palette.inkSoft)),
+              Text(context.isZh ? '春末夏初' : 'CHUNMO XIACHU', style: Lz.mono(size: 13, color: palette.inkSoft)),
+              Text(context.isZh ? 'CHUNMO XIACHU' : 'AI IN PRACTICE', style: Lz.mono(size: 13, color: palette.inkSoft)),
             ],
           ),
         ),

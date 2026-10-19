@@ -305,10 +305,10 @@ class _ScrollProgressButton extends StatelessWidget {
                   size: const Size(40, 40),
                   painter: _ProgressRingPainter(progress: value, color: color),
                 ),
-                // The original site signs the corner off with an "LZ" mark;
-                // the ring around it doubles as the reading-progress meter.
+                // The ring around the brand mark doubles as the reading
+                // progress meter.
                 Text(
-                  'LZ',
+                  'CX',
                   style: Lz.label(size: 11.5, letterSpacing: 0.14, color: color),
                 ),
               ],

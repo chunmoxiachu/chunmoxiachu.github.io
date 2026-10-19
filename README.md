@@ -1,6 +1,6 @@
-# 良竹 LIANGZHU · Flutter Web 复刻站
+# 春末夏初 CHUNMO XIACHU · Flutter Web 企业官网
 
-用 Flutter Web 复刻的「良竹 LIANGZHU」企业官网（参考原站：<https://liangzhu.me/?lang=zh>），
+以「春末夏初」品牌呈现的 Flutter Web 企业官网（视觉参考：<https://liangzhu.me/?lang=zh>），
 部署在 GitHub Pages：<https://chunmoxiachu.github.io/>
 
 ## 快速开始
@@ -62,7 +62,7 @@ tool/subset_cjk_font.py  # 重新生成中文子集字体（新增中文文案�
 
 ## 素材与字体说明
 
-- 页面文案、插画、贴纸、二维码与 3D 玻璃字均取自参考站点 <https://liangzhu.me/>（良竹本人站点），
+- 页面视觉素材（插画、贴纸、二维码与 3D 玻璃字）取自参考站点 <https://liangzhu.me/>，
   仅用于这次复刻演示；商用或正式上线前请替换为自有素材，或取得原作者授权。
 - 头像、微信二维码属于个人信息，如需公开部署请替换成占位图。
 - 字体：TikTok Sans、Geist Mono、Departure Mono 来自原站；中文回退使用

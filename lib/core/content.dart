@@ -128,15 +128,15 @@ class LegalSection {
   final L10n body;
 }
 
-/// All site copy, sourced from the reference site (zh) with its English
-/// counterpart used for the language toggle.
+/// All site copy, adapted for 春末夏初 with the English counterpart used for
+/// the language toggle.
 class SiteContent {
-  static const brand = '良竹 / LIANGZHU';
-  static const brandEn = 'LIANGZHU.ME';
+  static const brand = '春末夏初 / CHUNMO XIACHU';
+  static const brandEn = 'CHUNMO XIACHU';
 
   static const pageTitle = L10n(
-    '良竹｜AI 架构、全栈交付与实战培训',
-    'LIANGZHU · AI architecture, delivery & training',
+    '春末夏初｜AI 架构、全栈交付与实战培训',
+    'CHUNMO XIACHU · AI architecture, delivery & training',
   );
   static const wechatId = 'liangzhu2073';
   static const xHandle = '@liangzhu_AI';
@@ -165,8 +165,8 @@ class SiteContent {
     'Start from real pain points.\nBuild the next step.',
   );
   static const heroBio = L10n(
-    '我是良竹，14 年全栈研发与产品老兵。不做虚浮的 AI 概念，专为独立创业者与业务团队解决真实痛点：理清路径、跑通闭环、交付能稳定运行的真实成果。',
-    'I\u2019m Liangzhu, a 14-year software and product veteran. No hollow AI buzzwords\u2014just pragmatic engineering to clarify your path, validate loops, and deliver production-ready systems.',
+    '我们是春末夏初，一支由 14 年全栈研发与产品老兵组成的团队。不做虚浮的 AI 概念，专为独立创业者与业务团队解决真实痛点：理清路径、跑通闭环、交付能稳定运行的真实成果。',
+    'We are Chunmo Xiachu, a team led by a 14-year software and product veteran. No hollow AI buzzwords\u2014just pragmatic engineering to clarify your path, validate loops, and deliver production-ready systems.',
   );
   static const heroHeadline = L10n('把 AI|用进|真实业务', 'PUT AI|TO WORK|IN YOUR BUSINESS');
   static const heroCta = L10n('探索合作方式', 'Explore collaboration');
@@ -175,7 +175,7 @@ class SiteContent {
   // --------------------------------------------------------------- about
   static const aboutKicker = L10n('从想法到行动', 'From an idea to action');
   static const aboutTagline = L10n('让想法，走到下一步。', 'Take the idea one step further.');
-  static const aboutEyebrow = L10n('关于良竹', 'About Liangzhu');
+  static const aboutEyebrow = L10n('关于春末夏初', 'About Chunmo Xiachu');
   static const aboutTitle = L10n(
     '既懂产品的商业逻辑，也能把代码与交付推到上线。',
     'Product thinking rooted in commercial logic. Engineering depth that ships to production.',
@@ -189,7 +189,7 @@ class SiteContent {
     'As an independent founder building AI products (like Inkfox), I know every bump from zero to one. Working together means no corporate bureaucracy\u2014we focus on what matters and ship.',
   );
   static const aboutLinkStory = L10n('了解我的经历', 'Read my story');
-  static const aboutLinkX = L10n('在 X 认识良竹', 'Meet Liangzhu on X');
+  static const aboutLinkX = L10n('在 X 认识我们', 'Meet us on X');
 
   // ------------------------------------------------------------ services
   static const servicesLabel = L10n('服务', 'Services');
@@ -338,13 +338,13 @@ class SiteContent {
     '带上你的业务场景或项目想法，一起聊清楚能做什么、从哪里开始。',
     'Bring a business problem or project idea. Let\u2019s work out what to build and where to start.',
   );
-  static const contactCta = L10n('联系良竹', 'Get in touch');
+  static const contactCta = L10n('联系春末夏初', 'Get in touch');
   static const contactScan = L10n('扫码添加微信', 'Scan with WeChat');
   static const contactWechat = L10n('微信 / WECHAT', 'WeChat');
   static const contactCopy = L10n('复制微信号', 'Copy ID');
   static const contactCopied = L10n('已复制微信号', 'WeChat ID copied');
   static const contactInspiration = L10n('视觉灵感 · haoqi.design', 'Visual inspiration · haoqi.design');
-  static const copyright = L10n('良竹 © 2026', 'LIANGZHU © 2026');
+  static const copyright = L10n('春末夏初 © 2026', 'CHUNMO XIACHU © 2026');
   static const closingTitle = L10n('从一个真实问题开始', 'Start with a real problem');
   static const closingBody = L10n(
     '告诉我们你的业务、现在卡在哪里，以及想做到什么。我们从眼前最具体的问题开始。',
@@ -636,7 +636,7 @@ class SiteContent {
     LegalSection(
       title: L10n('需求会自动发送吗？', 'Are requests sent automatically?'),
       body: L10n(
-        '需求表单用于在浏览器里整理和生成合作摘要，不会自动把表单发送给良竹。复制摘要后，你自行决定通过微信等渠道发送哪些信息。请不要在需求摘要中填写密码、密钥或与合作无关的敏感信息。',
+        '需求表单用于在浏览器里整理和生成合作摘要，不会自动把表单发送给春末夏初。复制摘要后，你自行决定通过微信等渠道发送哪些信息。请不要在需求摘要中填写密码、密钥或与合作无关的敏感信息。',
         'The request form only composes a summary inside your browser; nothing is sent automatically. After copying the summary you decide what to share through WeChat or any other channel. Please do not include passwords, keys or unrelated sensitive data.',
       ),
     ),
@@ -650,8 +650,8 @@ class SiteContent {
     LegalSection(
       title: L10n('如何联系？', 'How to get in touch?'),
       body: L10n(
-        '如需咨询本站数据处理或联系信息相关问题，请通过关于与联系页面的微信 liangzhu2073 联系良竹。',
-        'For questions about data handling or contact details, reach Liangzhu on WeChat: liangzhu2073.',
+        '如需咨询本站数据处理或联系信息相关问题，请通过关于与联系页面的微信 liangzhu2073 联系春末夏初。',
+        'For questions about data handling or contact details, reach Chunmo Xiachu on WeChat: liangzhu2073.',
       ),
     ),
   ];
@@ -660,15 +660,15 @@ class SiteContent {
     LegalSection(
       title: L10n('谁在提供这些内容？', 'Who provides this content?'),
       body: L10n(
-        '本站由良竹维护，分享个人的 AI、产品和业务实践。文章中的历史项目及数据以原发表时间和具体上下文为准。',
-        'This site is maintained by Liangzhu and shares personal AI, product and business practice. Historical projects and figures are accurate as of their original publication context.',
+        '本站由春末夏初维护，分享团队的 AI、产品和业务实践。文章中的历史项目及数据以原发表时间和具体上下文为准。',
+        'This site is maintained by Chunmo Xiachu and shares our AI, product and business practice. Historical projects and figures are accurate as of their original publication context.',
       ),
     ),
     LegalSection(
       title: L10n('引用与素材来源', 'Citations and sources'),
       body: L10n(
-        '引用文章时请注明良竹、文章标题与原文链接。第三方引用、软件、字体及素材保留其原有许可和来源；本站发布不意味着第三方素材可以任意再分发。',
-        'When quoting, credit Liangzhu, the article title and the original link. Third-party references, software, fonts and assets keep their own licences; publication here does not permit redistribution.',
+        '引用文章时请注明春末夏初、文章标题与原文链接。第三方引用、软件、字体及素材保留其原有许可和来源；本站发布不意味着第三方素材可以任意再分发。',
+        'When quoting, credit Chunmo Xiachu, the article title and the original link. Third-party references, software, fonts and assets keep their own licences; publication here does not permit redistribution.',
       ),
     ),
     LegalSection(
