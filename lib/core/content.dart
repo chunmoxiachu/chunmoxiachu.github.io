@@ -135,13 +135,12 @@ class SiteContent {
   static const brandEn = 'CHUNMO XIACHU';
 
   static const pageTitle = L10n(
-    '春末夏初｜AI 架构、全栈交付与实战培训',
-    'CHUNMO XIACHU · AI architecture, delivery & training',
+    '春末夏初｜企业 AI 科技公司',
+    'CHUNMO XIACHU · Enterprise AI company',
   );
-  static const wechatId = 'liangzhu2073';
-  static const xHandle = '@liangzhu_AI';
-  static const xUrl = 'https://x.com/liangzhu_AI';
-  static const inspirationUrl = 'https://haoqi.design/';
+  static const businessWechatId = 'liangzhu2073';
+  static const companyGithubUrl = 'https://github.com/chunmoxiachu';
+  static const companyGithubLabel = 'GitHub · chunmoxiachu';
 
   static const navServices = L10n('服务', 'Services');
   static const navLibrary = L10n('内容与学习', 'Read / Learn');
@@ -165,38 +164,42 @@ class SiteContent {
     'Start from real pain points.\nBuild the next step.',
   );
   static const heroBio = L10n(
-    '我们是春末夏初，一支由 14 年全栈研发与产品老兵组成的团队。不做虚浮的 AI 概念，专为独立创业者与业务团队解决真实痛点：理清路径、跑通闭环、交付能稳定运行的真实成果。',
-    'We are Chunmo Xiachu, a team led by a 14-year software and product veteran. No hollow AI buzzwords\u2014just pragmatic engineering to clarify your path, validate loops, and deliver production-ready systems.',
+    '春末夏初是一家专注企业 AI 的科技公司。我们把产品判断、工程实现与交付能力放在同一个团队里，从真实业务问题出发，把 AI 做成能上线、能使用、能持续迭代的系统。',
+    'Chunmo Xiachu is a technology company focused on putting AI to work in real businesses. We bring product thinking, engineering and delivery into one team\u2014turning real business problems into AI systems that ship, get used and keep improving.',
+  );
+  static const heroBioShort = L10n(
+    '专注企业 AI 的科技公司。\n从业务问题出发，交付可运行的 AI 系统。',
+    'Enterprise AI delivery company.\nReal business problems, working systems.',
   );
   static const heroHeadline = L10n('把 AI|用进|真实业务', 'PUT AI|TO WORK|IN YOUR BUSINESS');
   static const heroCta = L10n('探索合作方式', 'Explore collaboration');
-  static const heroSticker = L10n('2026', '2026');
+  static const heroSticker = L10n('CX / 26', 'CX / 26');
 
   // --------------------------------------------------------------- about
-  static const aboutKicker = L10n('从想法到行动', 'From an idea to action');
-  static const aboutTagline = L10n('让想法，走到下一步。', 'Take the idea one step further.');
+  static const aboutKicker = L10n('关于公司', 'About the company');
+  static const aboutTagline = L10n('让 AI 进入业务现场。', 'AI into the real world.');
   static const aboutEyebrow = L10n('关于春末夏初', 'About Chunmo Xiachu');
   static const aboutTitle = L10n(
-    '既懂产品的商业逻辑，也能把代码与交付推到上线。',
-    'Product thinking rooted in commercial logic. Engineering depth that ships to production.',
+    '把 AI 从概念，做成企业真正能用的系统。',
+    'From AI concept to systems your business can actually run.',
   );
   static const aboutBody1 = L10n(
-    '14 年间，我做过一线全栈研发、架构设计，也带过产品与项目团队。面对 AI 浪潮，我不做浮夸的说客，而是将工程底子转化为业务落地的真实解法。',
-    'Over 14 years, I\u2019ve worked across full-stack engineering, system architecture, and product leadership. In the AI era, I bring grounded technical depth to make AI work in real businesses.',
+    '春末夏初聚焦企业 AI 咨询、团队培训与 FDE 落地。我们不从工具清单出发，而是先理解业务流程、组织能力与真实约束，再决定技术路径。',
+    'Chunmo Xiachu works across enterprise AI consulting, team training and forward-deployed delivery. We start with business processes, team capabilities and real constraints\u2014not a list of tools.',
   );
   static const aboutBody2 = L10n(
-    '我自己也是独立 AI 产品创作者（如 Inkfox），深知从零到一的每个坑。与我合作，没有冗长的汇报，我们直奔目标，把最值得做的一步切切实实做出来。',
-    'As an independent founder building AI products (like Inkfox), I know every bump from zero to one. Working together means no corporate bureaucracy\u2014we focus on what matters and ship.',
+    '从方案、开发到培训与交接，我们以可运行的成果作为交付标准。',
+    'From planning and development to training and handover, our standard is working delivery.',
   );
-  static const aboutLinkStory = L10n('了解我的经历', 'Read my story');
-  static const aboutLinkX = L10n('在 X 认识我们', 'Meet us on X');
+  static const aboutLinkStory = L10n('了解公司', 'About the company');
+  static const aboutLinkServices = L10n('查看服务', 'Explore services');
 
   // ------------------------------------------------------------ services
   static const servicesLabel = L10n('服务', 'Services');
   static const servicesTitle = L10n('你需要哪一种支持？', 'What kind of support do you need?');
   static const servicesLead = L10n(
-    '理清方向、团队学会实操，或直接找资深合伙人推进交付。三项服务可独立选择。',
-    'Clarify direction, empower your team with hands-on AI tools, or bring in a technical partner to lead delivery. Choose any service independently.',
+    '理清方向、让团队学会实操，或由我们的交付团队进入业务现场推进落地。三项服务可独立选择。',
+    'Clarify direction, build hands-on capability, or bring our delivery team into the business. Choose any service independently.',
   );
   static const servicesOutcomeLabel = L10n('你会得到', 'What you leave with');
 
@@ -253,7 +256,7 @@ class SiteContent {
 
   // ------------------------------------------------------------- library
   static const libraryLabel = L10n('内容与学习', 'Read / Learn / Build');
-  static const libraryTitle = L10n('做过的事，学到的东西。', 'What I build. What I learn.');
+  static const libraryTitle = L10n('公司实践，行业观察。', 'What we build. What we learn.');
 
   static const library = <LibraryItem>[
     LibraryItem(
@@ -299,7 +302,7 @@ class SiteContent {
   ];
 
   // -------------------------------------------------------------- method
-  static const methodLabel = L10n('做事的方法', 'How I work');
+  static const methodLabel = L10n('我们的方法', 'How we work');
   static const methodTitleA = L10n('从真实\n问题\n出发', 'START WITH\nA REAL\nPROBLEM');
   static const methodTitleB = L10n('让人\n用得上\n接得住', 'BUILT TO USE.\nREADY TO\nHAND OVER.');
   static const methodStepsLabel = L10n('四个做事步骤', 'Four practical steps');
@@ -333,39 +336,47 @@ class SiteContent {
 
   // ------------------------------------------------------------- contact
   static const contactEyebrow = L10n('联系', 'Contact');
-  static const contactTitle = L10n('让 AI 解决真实问题。', 'Let AI solve real problems.');
+  static const contactTitle = L10n('让 AI 成为企业的生产力。', 'Make AI part of how your business works.');
   static const contactBody = L10n(
-    '带上你的业务场景或项目想法，一起聊清楚能做什么、从哪里开始。',
-    'Bring a business problem or project idea. Let\u2019s work out what to build and where to start.',
+    '无论是评估方向、团队培训还是系统落地，先告诉我们贵司的业务场景和当前卡点。我们会从最具体的问题开始。',
+    'Whether you are evaluating direction, training a team or delivering a system, start with your business context and current blocker. We begin with the most concrete problem.',
   );
-  static const contactCta = L10n('联系春末夏初', 'Get in touch');
-  static const contactScan = L10n('扫码添加微信', 'Scan with WeChat');
-  static const contactWechat = L10n('微信 / WECHAT', 'WeChat');
-  static const contactCopy = L10n('复制微信号', 'Copy ID');
-  static const contactCopied = L10n('已复制微信号', 'WeChat ID copied');
-  static const contactInspiration = L10n('视觉灵感 · haoqi.design', 'Visual inspiration · haoqi.design');
+  static const contactCta = L10n('联系商务团队', 'Contact our team');
+  static const contactScan = L10n('扫码添加商务微信', 'Scan for business WeChat');
+  static const contactWechat = L10n('商务微信 / WECHAT', 'Business WeChat');
+  static const contactCopy = L10n('复制商务微信', 'Copy business WeChat');
+  static const contactCopied = L10n('已复制商务微信', 'Business WeChat copied');
   static const copyright = L10n('春末夏初 © 2026', 'CHUNMO XIACHU © 2026');
-  static const closingTitle = L10n('从一个真实问题开始', 'Start with a real problem');
+  static const closingTitle = L10n('从一个真实业务问题开始', 'Start with a real business problem');
   static const closingBody = L10n(
-    '告诉我们你的业务、现在卡在哪里，以及想做到什么。我们从眼前最具体的问题开始。',
-    'Tell me about your business, where it is stuck and what you want to achieve. We start from the most concrete question in front of you.',
+    '告诉我们贵司的业务、现在卡在哪里，以及想做到什么。我们从眼前最具体的问题开始。',
+    'Tell us about your business, where it is stuck and what you want to achieve. We start from the most concrete question in front of you.',
   );
 
   // ------------------------------------------------------- about page
-  static const aboutPageEyebrow = L10n('关于与联系', 'About & contact');
-  static const aboutPageTitle = L10n('既懂产品的商业逻辑，\n也能把代码与交付推到上线。', 'Product thinking.\nEngineering that ships.');
+  static const aboutPageEyebrow = L10n('关于公司与联系', 'About & contact');
+  static const aboutPageTitle = L10n('懂业务，也懂工程。\n把 AI 推到生产环境。', 'Business context.\nEngineering that ships.');
+  static const aboutPageLead = L10n(
+    '春末夏初是一家专注企业 AI 的科技公司。我们把产品判断、工程实现与交付能力放在同一个团队里，从真实业务问题出发，把 AI 做成能上线、能使用、能持续迭代的系统。',
+    'Chunmo Xiachu is a technology company focused on putting AI to work in real businesses. We bring product thinking, engineering and delivery into one team\u2014turning real business problems into AI systems that ship, get used and keep improving.',
+  );
+  static const companyFacts = <(L10n, L10n)>[
+    (L10n('服务范围', 'What we do'), L10n('AI 咨询 / 企业培训 / FDE 交付', 'AI consulting / team training / FDE delivery')),
+    (L10n('合作方式', 'How we engage'), L10n('诊断 → 方案 → 开发 → 实训 → 交接', 'Diagnose → plan → build → train → hand over')),
+    (L10n('交付标准', 'Delivery standard'), L10n('可运行 / 可验收 / 可维护', 'Running / accepted / maintainable')),
+  ];
   static const aboutPageFacts = <NoteItem>[
     NoteItem(
-      title: L10n('14 年研发与产品经验', '14 years in engineering & product'),
-      body: L10n('一线全栈研发、架构设计，也带过产品与项目团队。', 'Hands-on full-stack work, architecture design, and product team leadership.'),
+      title: L10n('企业 AI 落地公司', 'An enterprise AI delivery company'),
+      body: L10n('聚焦 AI 咨询、团队培训与 FDE 落地，把 AI 能力带进真实业务流程。', 'Focused on AI consulting, team training and FDE delivery that reaches real business workflows.'),
     ),
     NoteItem(
-      title: L10n('独立 AI 产品创作者', 'Independent AI product builder'),
-      body: L10n('自己做产品（如 Inkfox），深知从零到一的每个坑。', 'Building products such as Inkfox, with first-hand experience from zero to one.'),
+      title: L10n('产品与工程一体', 'Product and engineering in one team'),
+      body: L10n('从业务判断、架构设计到开发交付，由同一团队持续推进。', 'One team carries the work from business framing and architecture through development and delivery.'),
     ),
     NoteItem(
-      title: L10n('交付即可用', 'Delivery you can run'),
-      body: L10n('不做浮夸的概念，交付能稳定运行的真实成果。', 'No inflated concepts. Everything ships in a state your team can operate.'),
+      title: L10n('以可运行为标准', 'Built to run'),
+      body: L10n('交付生产可用的系统、文档与团队能力，而不是停留在演示。', 'We deliver production-ready systems, documentation and team capability\u2014not a demo.'),
     ),
   ];
 
@@ -379,7 +390,7 @@ class SiteContent {
         'Where AI fits, which tools to pick, why the project is stuck\u2014bring your context and questions and we will map the options and the next step.',
       ),
       cta: L10n('加微信，免费聊聊', 'Add WeChat, chat for free'),
-      tags: L10n('14 年软件与项目经验\n围绕你的真实业务交流', '14 years of software & project experience\nGrounded in your real business'),
+      tags: L10n('企业 AI 咨询 · 业务场景导向\n围绕真实问题展开交流', 'Enterprise AI consulting · business-led\nGrounded in your real operations'),
       notesLabel: L10n('带着这些问题，来聊聊', 'Bring questions like these'),
       notes: [
         NoteItem(
@@ -516,7 +527,7 @@ class SiteContent {
       closingTitle: L10n('从一个真实问题开始', 'Start from a real problem'),
       closingBody: L10n(
         '先聊聊企业现状和业务痛点：参训岗位和人数、现有工具基础，以及可用于实操的脱敏材料。',
-        'Tell me the current pain points, which roles will join, the tooling baseline and what anonymised material is available for practice.',
+        'Tell us the current pain points, which roles will join, the tooling baseline and what anonymised material is available for practice.',
       ),
     ),
     'fde': ServiceDetail(
@@ -524,9 +535,9 @@ class SiteContent {
       title: L10n('把 AI 需求，\n做成可用的成果。', 'Turn an AI need\ninto working delivery.'),
       lead: L10n(
         '先进入企业了解情况，梳理痛点与卡点，再提出逐项对应的方案。确认后开发，带团队培训与实训，最后验收交接。',
-        'I work inside the business, map the blockers, propose a matched plan per problem, then build, train the team and hand over.',
+        'Our team works inside the business, maps the blockers, proposes a matched plan per problem, then builds, trains your team and hands over.',
       ),
-      cta: L10n('说说你想做成什么', 'Tell me what to build'),
+      cta: L10n('说说你想做成什么', 'Tell us what to build'),
       tags: L10n('企业诊断 / 方案 / 开发 / 实训 / 交接', 'Diagnosis / plan / build / practice / handover'),
       notesLabel: L10n('这些业务问题，可以一起做出来', 'Problems worth building for'),
       notes: [

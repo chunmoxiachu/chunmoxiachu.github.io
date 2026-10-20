@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../core/app_state.dart';
 import '../core/content.dart';
@@ -9,7 +8,7 @@ import '../widgets/page_parts.dart';
 import '../widgets/primitives.dart';
 import '../widgets/site_shell.dart';
 
-/// `/about` — who Chunmo Xiachu is, plus the direct contact details.
+/// `/about` — company profile and business contact details.
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
 
@@ -18,51 +17,19 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  bool _copied = false;
-
-  Future<void> _copyWechat() async {
-    await Clipboard.setData(const ClipboardData(text: SiteContent.wechatId));
-    if (!mounted) return;
-    setState(() => _copied = true);
-    Future<void>.delayed(const Duration(seconds: 2), () {
-      if (mounted) setState(() => _copied = false);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
     final factor = formFactorFor(width);
     final palette = context.palette;
     final isMobile = factor.isMobile;
-    final twoUp = width >= 980;
+    final twoUp = width >= 1080;
 
-    final portrait = RevealBox(
+    final brandPanel = RevealBox(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(
-            clipBehavior: Clip.none,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(6),
-                child: Image.asset(
-                  'assets/brand/avatar-hd.webp',
-                  width: twoUp ? 300 : width * 0.62,
-                  filterQuality: FilterQuality.high,
-                ),
-              ),
-              Positioned(
-                right: -28,
-                top: -22,
-                child: Image.asset(
-                  'assets/brand/stickers/bamboo.webp',
-                  width: 78,
-                  filterQuality: FilterQuality.high,
-                ),
-              ),
-            ],
-          ),
+          const CompanyMark(),
           const SizedBox(height: 22),
           Text(
             SiteContent.heroRole.of(context),
@@ -75,6 +42,31 @@ class _AboutPageState extends State<AboutPage> {
     final story = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        for (final (label, value) in SiteContent.companyFacts) ...[
+          RevealBox(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: twoUp ? 116 : 92,
+                  child: Text(
+                    label.of(context),
+                    style: Lz.mono(size: 12, height: 1.6, color: palette.inkFaint),
+                  ),
+                ),
+                Expanded(
+                  child: Text(
+                    value.of(context),
+                    style: Lz.sans(size: 15.5, height: 1.6, color: palette.ink),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
+          HairLine(),
+          const SizedBox(height: 16),
+        ],
         for (final fact in SiteContent.aboutPageFacts) ...[
           RevealBox(
             child: Column(
@@ -128,16 +120,16 @@ class _AboutPageState extends State<AboutPage> {
             runSpacing: 12,
             children: [
               TextLink(
-                label: 'X · ${SiteContent.xHandle}',
+                label: SiteContent.companyGithubLabel,
                 arrow: '\u2197',
-                onTap: () => openExternal(SiteContent.xUrl),
+                onTap: () => openExternal(SiteContent.companyGithubUrl),
               ),
               TextLink(
-                label: SiteContent.contactInspiration.of(context),
+                label: SiteContent.aboutLinkServices.of(context),
                 arrow: '\u2197',
                 color: palette.inkSoft,
                 size: 14,
-                onTap: () => openExternal(SiteContent.inspirationUrl),
+                onTap: () => goTo(context, '/services/consulting'),
               ),
             ],
           ),
@@ -152,29 +144,34 @@ class _AboutPageState extends State<AboutPage> {
           child: PageHeading(
             eyebrow: SiteContent.aboutPageEyebrow.of(context),
             title: SiteContent.aboutPageTitle.of(context),
-            lead: SiteContent.heroBio.of(context),
+            lead: SiteContent.aboutPageLead.of(context),
             meta: SiteContent.heroPhilosophy.of(context).replaceAll('\n', ' '),
           ),
         ),
         Padding(
           padding: EdgeInsets.fromLTRB(factor.gutter, 0, factor.gutter, isMobile ? 48 : 88),
-          child: twoUp
-              ? Row(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (twoUp)
+                Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(width: 360, child: portrait),
+                    SizedBox(width: 300, child: brandPanel),
                     const SizedBox(width: 64),
                     Expanded(child: story),
                   ],
                 )
-              : Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    portrait,
-                    const SizedBox(height: 40),
-                    story,
-                  ],
+              else ...[
+                SizedBox(
+                  width: isMobile ? width - factor.gutter * 2 : 360,
+                  child: brandPanel,
                 ),
+                const SizedBox(height: 40),
+                story,
+              ],
+            ],
+          ),
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: factor.gutter),
@@ -182,23 +179,7 @@ class _AboutPageState extends State<AboutPage> {
         ),
         Padding(
           padding: EdgeInsets.fromLTRB(factor.gutter, isMobile ? 40 : 64, factor.gutter, isMobile ? 40 : 72),
-          child: twoUp
-              ? Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(child: _contactCopy(context)),
-                    const SizedBox(width: 64),
-                    _wechatCard(context, isMobile),
-                  ],
-                )
-              : Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _contactCopy(context),
-                    const SizedBox(height: 32),
-                    _wechatCard(context, isMobile),
-                  ],
-                ),
+          child: _contactCopy(context),
         ),
         ClosingCta(
           title: SiteContent.closingTitle.of(context),
@@ -236,55 +217,12 @@ class _AboutPageState extends State<AboutPage> {
           ),
         ),
         const SizedBox(height: 26),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              SiteContent.contactWechat.of(context).toUpperCase(),
-              style: Lz.label(size: 11, color: palette.inkFaint),
-            ),
-            const SizedBox(height: 8),
-            TextLink(
-              label: _copied
-                  ? SiteContent.contactCopied.of(context)
-                  : SiteContent.wechatId,
-              arrow: '',
-              size: 16,
-              onTap: _copyWechat,
-            ),
-          ],
+        TextLink(
+          label: SiteContent.companyGithubLabel,
+          arrow: '\u2197',
+          onTap: () => openExternal(SiteContent.companyGithubUrl),
         ),
       ],
-    );
-  }
-
-  Widget _wechatCard(BuildContext context, bool isMobile) {
-    final palette = context.palette;
-    return RevealBox(
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: palette.paper,
-          border: Border.all(color: palette.ink.withValues(alpha: 0.1)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: isMobile ? 150 : 176,
-              height: isMobile ? 150 : 176,
-              padding: const EdgeInsets.all(8),
-              color: Colors.white,
-              child: Image.asset('assets/brand/wechat-qr.webp', filterQuality: FilterQuality.high),
-            ),
-            const SizedBox(height: 12),
-            Text(
-              SiteContent.contactScan.of(context),
-              style: Lz.mono(size: 12.5, color: palette.inkSoft),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

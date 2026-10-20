@@ -46,6 +46,9 @@ def collect_text(repo_root: str) -> str:
     for path in glob.glob(os.path.join(repo_root, "lib", "**", "*.dart"), recursive=True):
         with open(path, encoding="utf-8") as handle:
             chars.update(handle.read())
+    # The boot/noscript copy lives in the HTML shell, not in lib/.
+    with open(os.path.join(repo_root, "web", "index.html"), encoding="utf-8") as handle:
+        chars.update(handle.read())
     return "".join(sorted(chars))
 
 

@@ -1,6 +1,7 @@
-# 春末夏初 CHUNMO XIACHU · Flutter Web 企业官网
+# 春末夏初科技公司 · Flutter Web 企业官网
 
-以「春末夏初」品牌呈现的 Flutter Web 企业官网（视觉参考：<https://liangzhu.me/?lang=zh>），
+春末夏初是一家专注企业 AI 的科技公司，提供 AI 咨询、企业实战培训与 FDE 落地交付。
+本站是以公司视角呈现的 Flutter Web 企业官网（视觉参考：<https://liangzhu.me/?lang=zh>），
 部署在 GitHub Pages：<https://chunmoxiachu.github.io/>
 
 ## 快速开始
@@ -34,7 +35,7 @@ lib/
   sections/              # 首页六个区块（Hero / 关于 / 服务 / 内容 / 方法 / 联系）
   pages/                 # 路由页面（首页、关于、服务详情、内容、法务、404）
 assets/
-  brand/                 # 品牌插画、贴纸、头像、微信二维码（WebP）
+  brand/                 # 品牌插画、贴纸、商务微信二维码（WebP）
   glass/                 # 由原站 GLB 模型离线渲染的 3D 玻璃字（PNG）
   fonts/                 # TikTok Sans / Geist Mono / Departure Mono + Noto Sans SC 子集
 tool/subset_cjk_font.py  # 重新生成中文子集字体（新增中文文案后运行）
@@ -64,7 +65,7 @@ tool/subset_cjk_font.py  # 重新生成中文子集字体（新增中文文案�
 
 - 页面视觉素材（插画、贴纸、二维码与 3D 玻璃字）取自参考站点 <https://liangzhu.me/>，
   仅用于这次复刻演示；商用或正式上线前请替换为自有素材，或取得原作者授权。
-- 头像、微信二维码属于个人信息，如需公开部署请替换成占位图。
+- 商务微信二维码需在上线前替换为公司账号；当前二维码仅作演示。
 - 字体：TikTok Sans、Geist Mono、Departure Mono 来自原站；中文回退使用
   [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)（SIL Open Font License 1.1），
   已按站点用字裁剪为子集，可用 `tool/subset_cjk_font.py` 重新生成。

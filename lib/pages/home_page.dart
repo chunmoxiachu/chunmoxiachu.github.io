@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../core/app_state.dart';
-import '../core/content.dart';
 import '../core/nav.dart';
 import '../sections/about_section.dart';
 import '../sections/contact_section.dart';
@@ -60,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               ),
               AboutSection(
                 onStory: () => goTo(context, '/about'),
-                onX: () => openExternal(SiteContent.xUrl),
+                onServices: () => goTo(context, '/services/consulting'),
               ),
               KeyedSubtree(
                 key: _servicesKey,

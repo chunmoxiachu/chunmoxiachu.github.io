@@ -6,10 +6,10 @@ import '../core/theme.dart';
 import '../widgets/primitives.dart';
 
 class AboutSection extends StatelessWidget {
-  const AboutSection({super.key, required this.onStory, required this.onX});
+  const AboutSection({super.key, required this.onStory, required this.onServices});
 
   final VoidCallback onStory;
-  final VoidCallback onX;
+  final VoidCallback onServices;
 
   @override
   Widget build(BuildContext context) {
@@ -18,21 +18,11 @@ class AboutSection extends StatelessWidget {
     final palette = context.palette;
     final gutter = factor.gutter;
 
-    final portrait = Column(
+    final brandPanel = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         RevealBox(
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(2),
-              child: Image.asset(
-                'assets/brand/avatar-hd.webp',
-                fit: BoxFit.cover,
-                width: double.infinity,
-              ),
-            ),
-          ),
+          child: const CompanyMark(),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
@@ -108,7 +98,7 @@ class AboutSection extends StatelessWidget {
             runSpacing: 12,
             children: [
               TextLink(label: SiteContent.aboutLinkStory.of(context), onTap: onStory),
-              TextLink(label: SiteContent.aboutLinkX.of(context), arrow: '\u2197', onTap: onX),
+              TextLink(label: SiteContent.aboutLinkServices.of(context), arrow: '\u2197', onTap: onServices),
             ],
           ),
         ),
@@ -137,14 +127,14 @@ class AboutSection extends StatelessWidget {
           ),
           const SizedBox(height: 28),
           if (factor.isMobile) ...[
-            portrait,
+            brandPanel,
             const SizedBox(height: 28),
             copy,
           ] else
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(flex: 4, child: portrait),
+                Expanded(flex: 4, child: brandPanel),
                 SizedBox(width: gutter + 24),
                 Expanded(flex: 8, child: copy),
               ],

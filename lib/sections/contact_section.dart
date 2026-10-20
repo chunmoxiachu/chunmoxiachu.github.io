@@ -27,7 +27,7 @@ class _ContactSectionState extends State<ContactSection> {
   bool _copied = false;
 
   Future<void> _copyWechat() async {
-    await Clipboard.setData(const ClipboardData(text: SiteContent.wechatId));
+    await Clipboard.setData(const ClipboardData(text: SiteContent.businessWechatId));
     if (!mounted) return;
     setState(() => _copied = true);
     Future<void>.delayed(const Duration(seconds: 2), () {
@@ -99,7 +99,9 @@ class _ContactSectionState extends State<ContactSection> {
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: Text(
-                      _copied ? SiteContent.contactCopied.of(context) : SiteContent.wechatId,
+                      _copied
+                          ? SiteContent.contactCopied.of(context)
+                          : SiteContent.businessWechatId,
                       style: Lz.mono(size: 12, color: palette.ink),
                     ),
                   ),
@@ -112,17 +114,9 @@ class _ContactSectionState extends State<ContactSection> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextLink(
-                    label: 'X · ${SiteContent.xHandle}',
+                    label: SiteContent.companyGithubLabel,
                     arrow: '\u2197',
-                    onTap: () => _open(SiteContent.xUrl),
-                  ),
-                  const SizedBox(height: 14),
-                  TextLink(
-                    label: SiteContent.contactInspiration.of(context),
-                    arrow: '',
-                    color: palette.inkSoft,
-                    size: 13,
-                    onTap: () => _open(SiteContent.inspirationUrl),
+                    onTap: () => _open(SiteContent.companyGithubUrl),
                   ),
                 ],
               ),

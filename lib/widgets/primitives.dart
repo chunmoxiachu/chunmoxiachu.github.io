@@ -205,6 +205,96 @@ class Eyebrow extends StatelessWidget {
   }
 }
 
+/// Corporate identity card used where the reference site had a portrait.
+class CompanyMark extends StatelessWidget {
+  const CompanyMark({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: 1,
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFFC0FE04),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: CustomPaint(
+                painter: _CompanyMarkPainter(color: const Color(0xFF111111).withValues(alpha: 0.12)),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'CHUNMO\nXIACHU',
+                    style: Lz.label(
+                      size: 13,
+                      height: 1.55,
+                      letterSpacing: 0.08,
+                      color: const Color(0xFF111111),
+                    ),
+                  ),
+                  const Spacer(),
+                  Text(
+                    '春末夏初',
+                    style: Lz.sans(
+                      size: 42,
+                      weight: FontWeight.w600,
+                      height: 1.1,
+                      letterSpacing: -1.6,
+                      color: const Color(0xFF111111),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Container(width: 56, height: 2, color: const Color(0xFF111111)),
+                  const SizedBox(height: 12),
+                  Text(
+                    'ENTERPRISE AI\nDELIVERY COMPANY',
+                    style: Lz.mono(
+                      size: 10,
+                      height: 1.65,
+                      letterSpacing: 0.08,
+                      color: const Color(0xB3111111),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _CompanyMarkPainter extends CustomPainter {
+  const _CompanyMarkPainter({required this.color});
+
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color
+      ..strokeWidth = 1;
+    for (var x = size.width * 0.2; x < size.width; x += size.width * 0.2) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    for (var y = size.height * 0.2; y < size.height; y += size.height * 0.2) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_CompanyMarkPainter old) => old.color != color;
+}
+
 /// Fades + lifts its child the first time it enters the viewport.
 class RevealBox extends StatefulWidget {
   const RevealBox({

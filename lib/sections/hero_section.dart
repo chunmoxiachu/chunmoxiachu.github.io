@@ -110,7 +110,7 @@ class _HeroSectionState extends State<HeroSection> {
                 child: RevealBox(
                   delay: const Duration(milliseconds: 160),
                   child: Text(
-                    SiteContent.heroBio.of(context),
+                    SiteContent.heroBioShort.of(context),
                     style: Lz.mono(size: 14, height: 1.65, color: palette.ink),
                   ),
                 ),
@@ -210,7 +210,7 @@ class _HeroSectionState extends State<HeroSection> {
                     child: RevealBox(
                       delay: const Duration(milliseconds: 380),
                       child: YearBadge(
-                        size: size.width * (factor.isMobile ? 0.055 : 0.042),
+                        size: size.width * (factor.isMobile ? 0.046 : 0.033),
                         rotation: 0.1,
                       ),
                     ),
@@ -263,11 +263,11 @@ class _IntroRow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
-          flex: 332,
+          flex: 360,
           child: Text(
             SiteContent.heroRole.of(context),
             style: Lz.sans(
-              size: 30,
+              size: 28,
               weight: FontWeight.w500,
               height: 1.25,
               letterSpacing: -0.6,
@@ -275,7 +275,7 @@ class _IntroRow extends StatelessWidget {
             ),
           ),
         ),
-        const Spacer(flex: 111),
+        const Spacer(flex: 84),
         Expanded(
           flex: 245,
           child: Text(
@@ -283,12 +283,12 @@ class _IntroRow extends StatelessWidget {
             style: Lz.mono(size: 15, height: 1.6, color: palette.ink),
           ),
         ),
-        const Spacer(flex: 197),
+        const Spacer(flex: 166),
         Expanded(
-          flex: 443,
+          flex: 360,
           child: Text(
-            SiteContent.heroBio.of(context),
-            style: Lz.mono(size: 15, height: 1.6, color: palette.ink),
+            SiteContent.heroBioShort.of(context),
+            style: Lz.mono(size: 13, height: 1.55, color: palette.ink),
           ),
         ),
       ],
@@ -325,7 +325,7 @@ class _Headline extends StatelessWidget {
   }
 }
 
-/// The rotated "2026" badge that floats over the hero artwork.
+/// The rotated studio badge that floats over the hero artwork.
 class YearBadge extends StatelessWidget {
   const YearBadge({super.key, required this.size, required this.rotation});
 
@@ -353,7 +353,7 @@ class YearBadge extends StatelessWidget {
         child: Text(
           SiteContent.heroSticker.of(context),
           style: Lz.sans(
-            size: size,
+            size: size * 0.82,
             weight: FontWeight.w700,
             letterSpacing: size * 0.02,
             color: Colors.white,

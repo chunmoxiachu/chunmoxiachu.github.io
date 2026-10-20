@@ -309,7 +309,7 @@ class _ClosingCtaState extends State<ClosingCta> {
   bool _copied = false;
 
   Future<void> _copyWechat() async {
-    await Clipboard.setData(const ClipboardData(text: SiteContent.wechatId));
+    await Clipboard.setData(const ClipboardData(text: SiteContent.businessWechatId));
     if (!mounted) return;
     setState(() => _copied = true);
     Future<void>.delayed(const Duration(seconds: 2), () {
@@ -396,7 +396,7 @@ class _ClosingCtaState extends State<ClosingCta> {
                     TextLink(
                       label: _copied
                           ? SiteContent.contactCopied.of(context)
-                          : '${SiteContent.contactWechat.of(context)} · ${SiteContent.wechatId}',
+                          : '${SiteContent.contactWechat.of(context)} · ${SiteContent.businessWechatId}',
                       arrow: '',
                       onTap: _copyWechat,
                     ),

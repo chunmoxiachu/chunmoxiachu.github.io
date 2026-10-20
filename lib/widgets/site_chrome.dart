@@ -434,7 +434,7 @@ class MenuOverlay extends StatelessWidget {
                     ),
                   const Spacer(),
                   Text(
-                    SiteContent.wechatId,
+                    SiteContent.businessWechatId,
                     style: Lz.mono(size: 13, color: palette.inkSoft),
                   ),
                 ],
